@@ -6,26 +6,20 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid black;
     margin: 0;
     padding: 0;
 }
 
 header {
-    height: 3.5rems;
-    padding-top: 0.8rem;
     background-color: #242021;
     color: #fff;
     font-size: .5rem;
     text-transform: uppercase;
+    height: 100px;
 }
 
 header img {
-    height: 25%;
-}
-
-nav {
-    padding: 1rem 0 1rem 0;
+    height: 50%;
 }
 
 nav ul {
@@ -36,53 +30,49 @@ nav ul li {
     background-color: #bb4430;
     color: #000;
     border: 1px solid #bb4430;
-    padding: 1rem 4rem 1rem 4rem;
 }
 
 nav ul li a {
     background-color: #bb4430;
     color: #fff;
     text-transform: uppercase;
+    font-weight: bold;
     text-decoration: none;
 }
 
 nav ul li a:hover {
     background-color: #bb4430;
     color: #000;
+    font-weight: bold;
 }
 
 nav ul li:nth-child(2) {
     background-color: #f3dfa2;
     color: #000;
     border: 1px solid #f3dfa2;
-    padding: 1rem 4rem 1rem 4rem;
     font-weight: bold;
     text-decoration: none;
 }
 
-nav ul li:nth-child(2) a:hover {
+nav ul li:nth-child(2) a {
     background-color: #f3dfa2;
     color: #000;
     text-decoration: none;
 }
 
+nav ul li:nth-child(2) a:hover {
+    background-color: #f3dfa2;
+    color: #fff;
+    text-decoration: none;
+}
+
 .wrapper {
-    background: #7ebdc2;
-    color: #000;
-    margin: 0 2rem 0 2rem;
-}
-
-#main_article {
-    padding: 0 1rem 0 1rem;
-}
-
-figure {
-    padding: 1rem 1rem 0 1rem;
+    background-color: #7ebdc2;
 }
 
 figcaption {
     text-align: center;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
 }
 
 figcaption a {
@@ -95,16 +85,9 @@ figcaption a {
 #secondary {
     background-color: #fff;
     color: #000;
-    padding: 1rem 0 1rem 2rem;
-}
-
-#sub_article {
-    padding: 2rem;
 }
 
 footer {
     background-color: #242021;
     color: #fff;
-    padding: 0.8rem 0 0 2rem;
-
 }
