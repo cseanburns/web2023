@@ -1,41 +1,25 @@
-function setUserPosition(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    fetchSunsetTime(latitude, longitude);
+// Start dark mode if it's after 6:59:59pm
+if (new Date().getHours() > 18) {
+  //alert(new Date().getHours());
+  const html = document.querySelector('html');
+  html.style.backgroundColor = 'black';
+  html.style.color = 'white';
 }
 
-function showError(error) {
-    console.error('Error:', error);
+if (new Date().getHours() > 18) {
+  const wrapperBody = document.getElementsByClassName('wrapper');
+  wrapperBody[0].style.backgroundColor = 'black';
+  wrapperBody[0].style.color = 'white';
 }
 
-function fetchSunsetTime(latitude, longitude) {
-    const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0];
-    const apiUrl = `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=${formattedDate}&formatted=0`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'OK') {
-                const sunsetTime = new Date(data.results.sunset);
-                checkAndEnableDarkMode(sunsetTime);
-            } else {
-                console.error('Error fetching sunset time:', data);
-            }
-        })
-        .catch(error => console.error('Error fetching sunset time:', error));
+if (new Date().getHours() > 18) {
+  const secondaryBody = document.getElementById('secondary');
+  secondaryBody.style.backgroundColor = 'black';
+  secondaryBody.style.color = 'white';
 }
 
-function checkAndEnableDarkMode(sunsetTime) {
-    const currentTime = new Date();
-    if (currentTime >= sunsetTime) {
-        document.body.classList.add('dark-mode');
-    }
+if (new Date().getHours() > 18) {
+  const figCap = document.getElementById('fig_cap');
+  figCap.style.backgroundColor = 'black';
+  figCap.style.color = 'white';
 }
-
-if ('geolocation' in navigator) {
-    navigator.geolocation.getCurrentPosition(setUserPosition, showError);
-} else {
-    console.error('Geolocation is not supported by your browser.');
-}
-

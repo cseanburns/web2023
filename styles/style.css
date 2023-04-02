@@ -73,7 +73,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-nav ul li:nth-child(2) {
+nav ul li:nth-child(even) {
     background-color: #f3dfa2;
     color: #000;
     border: 1px solid #f3dfa2;
@@ -81,7 +81,7 @@ nav ul li:nth-child(2) {
     text-decoration: none;
 }
 
-nav ul li:nth-child(2) a {
+nav ul li:nth-child(even) a {
     background-color: #f3dfa2;
     color: #000;
     text-decoration: none;
