@@ -10,6 +10,11 @@ body {
     padding: 0;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 header {
     background-color: #242021;
     color: #fff;
